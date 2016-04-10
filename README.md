@@ -1,7 +1,7 @@
 <h3>The problem:</h3>
-We track the location of all our mobile mechanics when they are working. We have noticed that there are many times when a mobile mechanics might need assistance from another mechanic or a last minute need for a part that someone else might carry. We want to build a system where mechanics can send requests with the option of defining specific parts needed to all mechanics that are close to their location.
+Assume we track the location of all our mobile mechanics. We have noticed that there are times when a mobile mechanic might need assistance from another mechanic or a last minute need for a part that someone else might carry. We want to build a system where mechanics can send requests with the option of defining specific parts needed to all mechanics that are close to their location.
 <h3>The solution:</h3>
-We will define a mediator and have have every mechanics register with it. When a mechanic sends a request, the mediator will detect all close by mechanics and will forward the request to them.
+We will define a mediator and have have every mechanics register with it. When a mechanic sends a request, the mediator will detect all close by mechanics and forwards the request to them.
 
 <!--more-->
 
@@ -9,7 +9,7 @@ Link to the repo for the completed project: <a href="https://github.com/kingreza
 
 Let's Begin
 
-First off let's get the easy stuff out of the way. We begin by defining our parts object:
+Lets start by defining our parts object:
 
 ````swift
 import Foundation
@@ -25,9 +25,9 @@ class Part{
 }
 ````
 
-A part will have a name and a price. The class itself has two properties that take care the two values and an initializer that sets them up when a part is created.
+A part will have a name and a price. The class itself has two properties that take care of the two values and an initializer that sets them up when a part is created.
 
-Next we'll define our Request object. This will be used by our mechanics and mediator to communicate with each other:
+Next we'll define our Request object. This will be the communicating object used by our mechanics and mediator:
 
 ````swift
 class Request {
@@ -88,7 +88,7 @@ class Mechanic{
 }
 ````
 
-A mechanic has a mediator which it uses for sending requests and a location which is defined as tuple of Int. This is the mechanic's hypothetical location on some X,Y coordinate. And of course a mechanic has a name. We set up these properties in the init function.
+A mechanic has a mediator which it uses for sending requests and a location which is defined as a tuple of Int. This is the mechanic's hypothetical location on some X, Y coordinate. We set up these properties in the init function.
 
 Next we define our send and receive functions for our mechanic. The send function will simply delegate the task to the mediator. The receive function is where the mechanic deals with the request. For this example the mechanic will simply print out the request it has received.
 
@@ -133,9 +133,9 @@ We first set up the distance which we believe is considered the boundary of bein
 
 We define a simple addMechanic function which will be used to add mechanics to our collection of mediated mechanics.
 
-Finally we implement the send function. Our mediator iterates through each mechanic in its list of mechanics, if the mechanic is not the same mechanic making the request and is close to the requesting mech it will receive the request.
+Finally we implement the send function. Our mediator iterates through each mechanic in its list of mechanics, if the mechanic is not the same mechanic making the request and is close to the requesting mechanic it will receive the request.
 
-This is it. Notice that our mechanics, although capable of communicating with each other are not aware of each other. There is no reference to another mechanic in our mechanics class.
+This is it. Notice that our mechanics, although capable of communicating with each other are not aware of each other. There is no reference to another mechanic in our mechanics class. The logic to decide which mechanic gets what request is define outside of the Mechanic which makes sense because it doesn't have anything to do with the Mechanic class itself.
 
 Lets test it out
 
@@ -167,7 +167,7 @@ First off we create a RequestMediator. Next we define our mechanics, setting the
 
 Next we add all the mechanics to the mediator.
 
-Now we have our mechanics sending request, lets see how mechanics close respond to these request:
+Now we have our mechanics sending request, lets see how mechanics respond to these request:
 
 ````swift
 Joe Bob received request from Steve Akio: I can't find this address anyone close by knows where Rengstorff Ave is?
@@ -184,13 +184,13 @@ Filters
 Program ended with exit code: 0
 ````
 
-we can see that Steve Akio and Joe Bob are close by so a request by Steve is received by Joe but not by Dave or Mike who are further than 50 units. Conversely a message sent by Mike is received by Dave and not Steve or Joe.
+We can see that Steve Akio and Joe Bob are close so a request by Steve is received by Joe but not by Dave or Mike who are further than 50 units away. Conversely a message sent by Mike is received by Dave and not Steve or Joe.
 
 Congratulations you have just implemented the Mediator Design Pattern to sovle a nontrivial problem
 
 The repo for the complete project can be found here:<a href="https://github.com/kingreza/Swift-Mediator"> Swift - Mediator </a> Download a copy of it and play around with it. See if you can find ways to improve it. Here are some ideas to consider:
 <ul>
-	<li>How can we factor out the necessary part from the Mechanic class to we can extend the mediator for other possible actors that wish to be part of the mediator.</li>
-	<li>What can go wrong when two objects reference each other and what can we do prevent it.</li>
-	<li>To keep the traffic of request low, have mechanics keep an inventory of parts they have and send the request to the mechanic if and only if they have the spare parts.</li>
+	<li>How can we factor out the necessary part from the Mechanic class so we can extend the mediator for other possible actors that wish to be part of the communications.</li>
+	<li>What can go wrong when two objects strongly reference each other and what can we do prevent it.</li>
+	<li>To keep the traffic of request low, have mechanics keep an inventory of spare parts and send the request to the mechanic if and only if they have the spare parts.</li>
 </ul>
