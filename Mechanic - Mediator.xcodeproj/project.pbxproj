@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		57C322881CB77CAC00C3FFD3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C322871CB77CAC00C3FFD3 /* main.swift */; };
+		57C3228F1CB77CF300C3FFD3 /* mechanic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3228E1CB77CF300C3FFD3 /* mechanic.swift */; };
+		57C322911CB77D1600C3FFD3 /* mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C322901CB77D1600C3FFD3 /* mediator.swift */; };
+		57C322931CB77D7E00C3FFD3 /* request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C322921CB77D7E00C3FFD3 /* request.swift */; };
+		57C322951CB77DD300C3FFD3 /* part.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C322941CB77DD300C3FFD3 /* part.swift */; };
+		57C322991CB77FF700C3FFD3 /* request_mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C322981CB77FF700C3FFD3 /* request_mediator.swift */; };
+		57C3229B1CB7847600C3FFD3 /* concrete_mechanic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3229A1CB7847600C3FFD3 /* concrete_mechanic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,12 @@
 /* Begin PBXFileReference section */
 		57C322841CB77CAC00C3FFD3 /* Mechanic - Mediator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Mechanic - Mediator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C322871CB77CAC00C3FFD3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		57C3228E1CB77CF300C3FFD3 /* mechanic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mechanic.swift; sourceTree = "<group>"; };
+		57C322901CB77D1600C3FFD3 /* mediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mediator.swift; sourceTree = "<group>"; };
+		57C322921CB77D7E00C3FFD3 /* request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = request.swift; sourceTree = "<group>"; };
+		57C322941CB77DD300C3FFD3 /* part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = part.swift; sourceTree = "<group>"; };
+		57C322981CB77FF700C3FFD3 /* request_mediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = request_mediator.swift; sourceTree = "<group>"; };
+		57C3229A1CB7847600C3FFD3 /* concrete_mechanic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = concrete_mechanic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				57C322871CB77CAC00C3FFD3 /* main.swift */,
+				57C3228E1CB77CF300C3FFD3 /* mechanic.swift */,
+				57C322901CB77D1600C3FFD3 /* mediator.swift */,
+				57C322921CB77D7E00C3FFD3 /* request.swift */,
+				57C322941CB77DD300C3FFD3 /* part.swift */,
+				57C322981CB77FF700C3FFD3 /* request_mediator.swift */,
+				57C3229A1CB7847600C3FFD3 /* concrete_mechanic.swift */,
 			);
 			path = "Mechanic - Mediator";
 			sourceTree = "<group>";
@@ -119,7 +137,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C322951CB77DD300C3FFD3 /* part.swift in Sources */,
 				57C322881CB77CAC00C3FFD3 /* main.swift in Sources */,
+				57C3229B1CB7847600C3FFD3 /* concrete_mechanic.swift in Sources */,
+				57C322931CB77D7E00C3FFD3 /* request.swift in Sources */,
+				57C3228F1CB77CF300C3FFD3 /* mechanic.swift in Sources */,
+				57C322991CB77FF700C3FFD3 /* request_mediator.swift in Sources */,
+				57C322911CB77D1600C3FFD3 /* mediator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
