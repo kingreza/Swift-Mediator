@@ -13,7 +13,6 @@
 		57C322931CB77D7E00C3FFD3 /* request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C322921CB77D7E00C3FFD3 /* request.swift */; };
 		57C322951CB77DD300C3FFD3 /* part.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C322941CB77DD300C3FFD3 /* part.swift */; };
 		57C322991CB77FF700C3FFD3 /* request_mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C322981CB77FF700C3FFD3 /* request_mediator.swift */; };
-		57C3229B1CB7847600C3FFD3 /* concrete_mechanic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3229A1CB7847600C3FFD3 /* concrete_mechanic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,7 +35,6 @@
 		57C322921CB77D7E00C3FFD3 /* request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = request.swift; sourceTree = "<group>"; };
 		57C322941CB77DD300C3FFD3 /* part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = part.swift; sourceTree = "<group>"; };
 		57C322981CB77FF700C3FFD3 /* request_mediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = request_mediator.swift; sourceTree = "<group>"; };
-		57C3229A1CB7847600C3FFD3 /* concrete_mechanic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = concrete_mechanic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +73,6 @@
 				57C322921CB77D7E00C3FFD3 /* request.swift */,
 				57C322941CB77DD300C3FFD3 /* part.swift */,
 				57C322981CB77FF700C3FFD3 /* request_mediator.swift */,
-				57C3229A1CB7847600C3FFD3 /* concrete_mechanic.swift */,
 			);
 			path = "Mechanic - Mediator";
 			sourceTree = "<group>";
@@ -139,7 +136,6 @@
 			files = (
 				57C322951CB77DD300C3FFD3 /* part.swift in Sources */,
 				57C322881CB77CAC00C3FFD3 /* main.swift in Sources */,
-				57C3229B1CB7847600C3FFD3 /* concrete_mechanic.swift in Sources */,
 				57C322931CB77D7E00C3FFD3 /* request.swift in Sources */,
 				57C3228F1CB77CF300C3FFD3 /* mechanic.swift in Sources */,
 				57C322991CB77FF700C3FFD3 /* request_mediator.swift in Sources */,
@@ -263,6 +259,7 @@
 				57C3228D1CB77CAC00C3FFD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

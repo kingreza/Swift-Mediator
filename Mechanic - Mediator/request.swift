@@ -23,5 +23,4 @@ class Request {
   convenience init(message: String, mechanic: Mechanic){
     self.init(message: message, mechanic: mechanic, parts: nil)
   }
-  
 }

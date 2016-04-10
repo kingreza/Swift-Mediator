@@ -10,10 +10,10 @@ import Foundation
 
 var requestManager = RequestMediator()
 
-var steve = ConcreteMechanic(mediator: requestManager, name: "Steve Akio", location: (23,12))
-var joe = ConcreteMechanic(mediator: requestManager, name: "Joe Bob", location: (13,12))
-var dave = ConcreteMechanic(mediator: requestManager, name: "Dave Far", location: (823,632))
-var mike = ConcreteMechanic(mediator: requestManager, name: "Mike Nearfar", location: (800,604))
+var steve = Mechanic(mediator: requestManager, name: "Steve Akio", location: (23,12))
+var joe = Mechanic(mediator: requestManager, name: "Joe Bob", location: (13,12))
+var dave = Mechanic(mediator: requestManager, name: "Dave Far", location: (823,632))
+var mike = Mechanic(mediator: requestManager, name: "Mike Nearfar", location: (800,604))
 
 requestManager.addMechanic(steve)
 requestManager.addMechanic(joe)
