@@ -50,7 +50,7 @@ class Request {
 
 A request will have a message, along with an array of parts that could be empty and a mechanic which is the owner of the request.
 
-Here we use the convenience init to have two separate init for cases with empty parts. We can easily just use the first one and pass in nil for parts but I personally like having the class provide its own init for those cases (and it's good practice). For more info on convenience init click here LINK.
+Here we use the convenience init to have two separate init for cases with empty parts. We can easily just use the first one and pass in nil for parts but I personally like having the class provide its own init for those cases (and it's good practice). For more info on <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html"> convenience init click here</a>
 
 Our Mechanic class will be defined as followed
 
