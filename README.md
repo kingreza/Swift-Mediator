@@ -11,7 +11,7 @@ Let's Begin
 
 First off let's get the easy stuff out of the way. We begin by defining our parts object:
 
-[code]
+````swift
 import Foundation
 
 class Part{
@@ -23,13 +23,13 @@ class Part{
     self.price = price
   }
 }
-[/code]
+````
 
 A part will have a name and a price. The class itself has two properties that take care the two values and an initializer that sets them up when a part is created.
 
 Next we'll define our Request object. This will be used by our mechanics and mediator to communicate with each other:
 
-[code]
+````swift
 class Request {
   var message: String
   var parts: [Part]?
@@ -46,7 +46,7 @@ class Request {
     self.init(message: message, mechanic: mechanic, parts: nil)
   }
 }
-[/code]
+````
 
 A request will have a message, along with an array of parts that could be empty and a mechanic which is the owner of the request.
 
@@ -54,7 +54,7 @@ Here we use the convenience init to have two separate init for cases with empty 
 
 Our Mechanic class will be defined as followed
 
-[code]
+````swift
 class Mechanic{
   let mediator: Mediator
   var location: (Int, Int)
@@ -86,7 +86,7 @@ class Mechanic{
     return hypotf(Float(mechanic.location.0 - location.0), Float(mechanic.location.1 - location.1)) <= distance
   }
 }
-[/code]
+````
 
 A mechanic has a mediator which it uses for sending requests and a location which is defined as tuple of Int. This is the mechanic's hypothetical location on some X,Y coordinate. And of course a mechanic has a name. We set up these properties in the init function.
 
@@ -98,19 +98,19 @@ Finally we define isCloseTo which takes a mechanic and a float and decides if th
 
 next we define a protocol for our Mediator.
 
-[code]
+````swift
 import Foundation
 
 protocol Mediator{
   func send(request: Request)
 }
-[/code]
+````
 
 The Mediator protocol is fairly simple. It requires a send function that takes a request as its parameter.
 
 Finally we define our RequestMediator which implements our Mediator protocol:
 
-[code]
+````swift
 class RequestMediator: Mediator{
   private let closeDistance: Float = 50.0
   private var mechanics: [Mechanic] = []
@@ -127,7 +127,7 @@ class RequestMediator: Mediator{
     }
   }
 }
-[/code]
+````
 
 We first set up the distance which we believe is considered the boundary of being close to another mechanic. Next we define an array of Mechanics that have subscribed to our mediator.
 
@@ -139,7 +139,7 @@ This is it. Notice that our mechanics, although capable of communicating with ea
 
 Lets test it out
 
-[code]
+````swift
 
 import Foundation
 
@@ -161,7 +161,7 @@ joe.send(Request(message: "I need some brake pads anyone close by has some?", me
 
 dave.send(Request(message: "Dang it I spilled all my oil, anyone around here got a spare 5 Quart Jug.. and some filters too", mechanic: dave, parts:[Part(name: "Engine Oil SuperPlus", price: 23.33), Part(name: "Filters", price: 4.99)]))
 
-[/code]
+````
 
 First off we create a RequestMediator. Next we define our mechanics, setting their mediator and location.
 
@@ -169,7 +169,7 @@ Next we add all the mechanics to the mediator.
 
 Now we have our mechanics sending request, lets see how mechanics close respond to these request:
 
-[code]
+````swift
 Joe Bob received request from Steve Akio: I can't find this address anyone close by knows where Rengstorff Ave is?
 ******************
 Steve Akio received request from Joe Bob: I need some brake pads anyone close by has some?
@@ -182,7 +182,7 @@ Engine Oil SuperPlus
 Filters
 ******************
 Program ended with exit code: 0
-[/code]
+````
 
 we can see that Steve Akio and Joe Bob are close by so a request by Steve is received by Joe but not by Dave or Mike who are further than 50 units. Conversely a message sent by Mike is received by Dave and not Steve or Joe.
 
