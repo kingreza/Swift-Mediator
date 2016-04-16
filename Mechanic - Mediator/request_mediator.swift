@@ -8,17 +8,18 @@
 
 import Foundation
 
-class RequestMediator: Mediator{
+class RequestMediator: Mediator {
   private let closeDistance: Float = 50.0
   private var mechanics: [Mechanic] = []
-  
-  func addMechanic(mechanic: Mechanic){
+
+  func addMechanic(mechanic: Mechanic) {
     mechanics.append(mechanic)
   }
-  
+
   func send(request: Request) {
-    for oneOfTheMechanics in mechanics{
-      if oneOfTheMechanics !== request.mechanic && request.mechanic.isCloseTo(oneOfTheMechanics, within: closeDistance){
+    for oneOfTheMechanics in mechanics {
+      if oneOfTheMechanics !== request.mechanic &&
+        request.mechanic.isCloseTo(oneOfTheMechanics, within: closeDistance) {
         oneOfTheMechanics.receive(request)
       }
     }

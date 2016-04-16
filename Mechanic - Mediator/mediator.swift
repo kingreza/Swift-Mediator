@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol Mediator{
+protocol Mediator {
   func send(request: Request)
 }
