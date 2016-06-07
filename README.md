@@ -1,5 +1,8 @@
 <h1>Design Patterns in Swift: Mediator</h1>
 This repository is part of a series. For the full list check out <a href="https://shirazian.wordpress.com/2016/04/11/design-patterns-in-swift/">Design Patterns in Swift</a>
+
+For a cheat-sheet of design patterns implemented in Swift check out <a href="https://github.com/ochococo/Design-Patterns-In-Swift"> Design Patterns implemented in Swift: A cheat-sheet</a>
+
 <h3>The problem:</h3>
 Assume we track the location of all our mobile mechanics. We have noticed that there are times when a mobile mechanic might need assistance from another mechanic or a last minute need for a part that someone else might carry. We want to build a system where mechanics can send requests with the option of defining specific parts needed to all mechanics that are close to their location.
 <h3>The solution:</h3>
