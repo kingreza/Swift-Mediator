@@ -6,7 +6,7 @@ For a cheat-sheet of design patterns implemented in Swift check out <a href="htt
 <h3>The problem:</h3>
 Assume we track the location of all our mobile mechanics. We have noticed that there are times when a mobile mechanic might need assistance from another mechanic or a last minute need for a part that someone else might carry. We want to build a system where mechanics can send requests with the option of defining specific parts needed to all mechanics that are close to their location.
 <h3>The solution:</h3>
-We will define a mediator and have have every mechanics register with it. When a mechanic sends a request, the mediator will detect all close by mechanics and forwards the request to them.
+We will define a mediator and have every mechanics register with it. When a mechanic sends a request, the mediator will detect all close by mechanics and forwards the request to them.
 
 <!--more-->
 
